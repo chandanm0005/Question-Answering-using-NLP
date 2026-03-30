@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuAI - Intelligent QA</title>
+    <!-- Modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome elements -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Glassmorphism decorative background elements -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-brain glow-icon"></i> NeuAI
+            </div>
+            <p>Paste a document and instantly get intelligent answers extracted using fast NLP algorithms.</p>
+        </header>
+
+        <main class="app-card">
+            <div class="input-group">
+                <label for="context"><i class="fa-solid fa-file-lines"></i> Context / Reference Text</label>
+                <textarea id="context" placeholder="Paste your reference text or paragraph here. The AI will read this to answer your question..." rows="8"></textarea>
+            </div>
+            
+            <div class="input-group">
+                <label for="question"><i class="fa-solid fa-circle-question"></i> Your Question</label>
+                <div class="search-box">
+                    <input type="text" id="question" placeholder="e.g. What is the main topic of this text?">
+                    <button id="ask-btn" class="glow-btn">
+                        <span>Ask <i class="fa-solid fa-arrow-right"></i></span>
+                        <div class="loader hidden"></div>
+                    </button>
+                </div>
+            </div>
+
+            <div id="result-container" class="result-box hidden">
+                <div class="result-header">
+                    <span><i class="fa-solid fa-bolt"></i> AI Answer</span>
+                    <span id="confidence" class="confidence-badge"></span>
+                </div>
+                <div class="answer-text" id="answer-text"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
