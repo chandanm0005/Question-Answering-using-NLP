@@ -90,6 +90,4 @@ def ask_question(query: QAQuery):
     except Exception as e:
         logger.error(f"Error during inference: {e}")
         raise HTTPException(status_code=500, detail=f"Internal server error: {str(e)}")
-@app.get("/")
-def home():
-    return {"message": "API is running 🚀"}
+
